@@ -19,23 +19,23 @@ while [[ 0 -eq 0 ]]; do
 
 	if [[ $battery_status == 'Discharging' && $battery_charge -le 25 ]]; then
 		if   [[ $battery_charge -le 15 && $last_notification_percentage -gt 15 ]]; then
-			notify-send --icon="$path/battery_low.svg" --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
+			notify-send --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
 			last_notification_percentage=15
 			sleep 480 # 8 minutes
-		elif [[ $battery_charge -le 10 && $last_notification_percentage -gt 10]]; then
-			notify-send --icon="$path/battery_low.svg" --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
+		elif [[ $battery_charge -le 10 && $last_notification_percentage -gt 10 ]]; then
+			notify-send --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
 			last_notification_percentage=10
 			sleep 240 # 4 minutes
-		elif [[ $battery_charge -le 5 && $last_notification_percentage -gt 5]]; then
-			notify-send --icon="$path/battery_low.svg" --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
+		elif [[ $battery_charge -le 5 && $last_notification_percentage -gt 5 ]]; then
+			notify-send --urgency=critical --expire-time 5000 "Battery critical!" "${battery_charge}%"
 			last_notification_percentage=5
 			sleep 180 # 2 minutes
 		else
-			notify-send --icon="$path/battery_low.svg" --expire-time 5000 "Battery low!" "${battery_charge}%"
+			notify-send --expire-time 5000 "Battery low!" "${battery_charge}%"
 			last_notification_percentage=25	
 			sleep 600 # 10 minutes
 		fi
-	elif [[ $battery_status == "Charging" -o $battery_status == "Not charging" ]]; then
+	elif [[ $battery_status == "Charging" || $battery_status == "Not charging" ]]; then
 		last_notification_percentage=$battery_charge
 		sleep 600 # 10 minutes
 	else
