@@ -8,8 +8,6 @@
 # Relative paths cannot be used following the repo structure since the repo will be clones independently from the setup file.
 
 set -e
-cd "$HOME/dotfiles/setup"
-chmod u+x scripts/*.sh
 
 # Configure DNF settings.
 echo -e "\nConfiguring DNF..."
@@ -36,8 +34,8 @@ elif [[ "$clone_response" =~ [Nn] ]]; then
     git clone --brach fedora git@github.com:ThePhoDit/dotfiles.git
 fi
 
-# Change into the just cloned repo to access the rest of the files.
-cd dotfiles/setup/
+cd "$HOME/dotfiles/setup"
+chmod u+x scripts/*.sh
 
 # Remove unwanted GNOME software.
 echo -e "\nRemoving bloatware..."
