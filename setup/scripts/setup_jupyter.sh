@@ -12,4 +12,4 @@ conda create -n Jupyter \
     nltk \
     beautifulsoup4
 
-conda init
+conda init || true
