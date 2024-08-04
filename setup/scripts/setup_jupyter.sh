@@ -1,7 +1,4 @@
-conda create -n Jupyter
-conda init
-conda activate Jupyter
-conda install \
+conda create -n Jupyter \
     numpy \
     pandas \
     matplotlib \
@@ -15,4 +12,4 @@ conda install \
     nltk \
     beautifulsoup4
 
-conda deactivate
+conda init
