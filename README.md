@@ -2,7 +2,9 @@
 
 - Run the setup script.
 ```bash
-curl -s https://github.com/ThePhoDit/dotfiles/tree/fedora/setup/setup.sh | bash
+curl -s https://raw.githubusercontent.com/ThePhoDit/dotfiles/fedora/setup/setup.sh
+chmod u+x setup.sh
+bash setup.sh
 ```
 
 - Install GNOME Shell extensions:
