@@ -23,24 +23,63 @@ cd "$HOME"
 
 # Choose how to clone the GitHub repo. If the user is the author of this script, with access to the repo with write permissions, an SSH key will be generated.
 echo -e "\n\nDo you want to clone the repo in HTTP mode? If not, SSH will be used, generating an SSH key. (Y/n)"
-read clone_response
-if [[ "$clone_response" =~ [Yy] || "$clone_response" == "" ]]; then
-    git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git
-elif [[ "$clone_response" =~ [Nn] ]]; then
-    if [[ -f "$HOME/.ssh/id_ed25519.pub" ]]; then
-	echo -e "\nDo you want to replace an already existing key? (y/N)"
-	read replace_key
 
-	if [[ "$replace_key" =~ [Yy] ]]; then
-    		ssh-keygen -t ed25519
-	fi
+while true ; do
+    echo -n "Response: "
+    read clone_response
+
+    # Cloning in HTTP mode.
+    if [[ "$clone_response" =~ [Yy] || "$clone_response" == "" ]] ; then
+        git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git
+        break
+    # Cloning in SSH mode.
+    elif [[ "$clone_response" =~ [Nn] ]] ; then
+        if [[ -f "$HOME/.ssh/id_ed25519.pub" ]] ; then
+           	echo -e "\nDo you want to replace an already existing key? (y/N)"
+
+            while true ; do
+                echo -n "Response: "
+           	    read replace_key
+
+               	if [[ "$replace_key" =~ [Yy] ]] ; then
+              		ssh-keygen -t ed25519
+                    break
+                elif [[ "$replace_key" =~ [Nn] || "$replace_key" == "" ]] ; then
+                    break
+               	fi
+            done
+        fi
+
+        # Display public key so it can be imported into GitHub.
+        echo -e "\n You are now going to be shown your public key. Copy it and add it to your GitHub account."
+
+        # Ask for key directory. Empty defaults to ~/.ssh/id_ed25519.pub
+        while true ; do
+            echo -n "Public key file: "
+            read pub_key_file
+
+            if [[ -z "$pub_key_file" ]] ; then
+                pub_key_file="$HOME/.ssh/id_ed25519.pub"
+            fi
+
+            if [[ "$pub_key_file" != *.pub ]] ; then
+                pub_key_file="${pub_key_file}.pub"
+            fi
+
+            if [[ -f "$pub_key_file" ]] ; then
+                break
+            fi
+
+            echo "File $pub_key_file does not exist."
+        done
+
+        echo -e "\n When you are done, press any key.\n"
+        cat "$pub_key_file"
+        read dummy
+        git clone --branch fedora git@github.com:ThePhoDit/dotfiles.git
+        break
     fi
-    echo -e "\n You are now going to be shown your public key (asuming default directory). Copy it and add it to your GitHub account."
-    echo -e "\n When you are done, press any key.\n"
-    cat "$HOME/.ssh/id_ed25519.pub"
-    read dummy
-    git clone --branch fedora git@github.com:ThePhoDit/dotfiles.git
-fi
+done
 
 cd "$HOME/dotfiles/setup"
 chmod u+x scripts/*.sh
@@ -135,8 +174,7 @@ gsettings set org.gnome.desktop.sound event-sounds "false"
 
 # Set keybinds.
 echo -e "\nSetting keybinds..."
-for i in {1..9}
-do
+for i in {1..9} ; do
     gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
     gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
     gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
@@ -154,6 +192,8 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-corner-se "['<Super><Cont
 gsettings set org.gnome.desktop.wm.keybindings move-to-corner-sw "['<Super><Control>J']"
 
 gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4', '<Super>C']"
+
+gsettings set org.gnome.desktop.wm.keybindings minimize "[]"
 
 # Launch kitty terminal.
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'Launch Kitty'"
