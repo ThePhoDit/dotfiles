@@ -1,1 +1,0 @@
-bin/battery_checker.sh
