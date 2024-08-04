@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# =============
+#   IMPORTANT
+# =============
+#
+# This file is made to be run in the user's home folder without having cloned the repo.
+# Relative paths cannot be used following the repo structure since the repo will be clones independently from the setup file.
+
 set -e
-cd "$HOME"
+cd "$HOME/dotfiles/setup"
 chmod u+x scripts/*.sh
 
 # Configure DNF settings.
@@ -14,6 +21,8 @@ echo -e "\nSet a hostname"
 read host
 sudo echo "$host" > /etc/hostname
 
+cd "$HOME"
+
 # Choose how to clone the GitHub repo. If the user is the author of this script, with access to the repo with write permissions, an SSH key will be generated.
 echo -e "\n\nDo you want to clone the repo in HTTP mode? If not, SSH will be used, generating an SSH key. (Y/n)"
 read clone_response
@@ -23,12 +32,12 @@ elif [[ "$clone_response" =~ [Nn] ]]; then
     ssh-keygen -t ed25519
     echo -e "\n You are now going to be shown your public key (asuming default directory). Copy it and add it to your GitHub account."
     echo -e "\n When you are done, press any key.\n"
-    cat "$HOME"/.ssh/id_ed25519.pub
+    cat "$HOME/.ssh/id_ed25519.pub"
     git clone --brach fedora git@github.com:ThePhoDit/dotfiles.git
 fi
 
 # Change into the just cloned repo to access the rest of the files.
-cd dotfiles
+cd dotfiles/setup/
 
 # Remove unwanted GNOME software.
 echo -e "\nRemoving bloatware..."
@@ -54,7 +63,7 @@ echo -e "\nInstalling additional software..."
 sudo dnf install -y $(grep "^[^#]" packages)
 
 # Change back to the home directory.
-cd ~
+cd "$HOME"
 
 # Install IntelliJ IDEA.
 wget https://www.jetbrains.com/idea/download/download-thanks.html?platform=linux
@@ -66,6 +75,8 @@ rm ideaIU-*.tar.gz
 wget https://ohmyposh.dev/install.sh | bash -s
 rm install.sh
 
+cd "$HOME/dotfiles/setup"
+
 # Install Spotify.
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client
@@ -74,9 +85,11 @@ bash scripts/path_spotify.sh
 # Create conda environment for Jupyter.
 bash scripts/setup_jupyter.sh
 
+cd "$HOME"
+
 # Install user fonts.
 echo -e "\nInstalling fonts..."
-fonts_path=~/.local/share/fonts
+fonts_path="$HOME/.local/share/fonts"
 # Download fonts.
 wget -P $fonts_path https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraMono.zip
 wget -P ~ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
@@ -149,3 +162,7 @@ chsh -s $(which zsh)
 
 # Linking dotfiles.
 echo -e "\nSetting dotfiles..."
+cd "$HOME/dotfiles"
+stow .
+
+echo -e "\n\nInstallation complete!"
