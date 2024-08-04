@@ -1,4 +1,5 @@
 conda create -n Jupyter
+conda init
 conda activate Jupyter
 conda install \
     numpy \
@@ -14,4 +15,4 @@ conda install \
     nltk \
     beautifulsoup4
 
-conda deactivate Jupyter
+conda deactivate
