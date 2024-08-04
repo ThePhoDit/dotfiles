@@ -2,7 +2,7 @@
 
 - Run the setup script.
 ```bash
-curl -s https://raw.githubusercontent.com/ThePhoDit/dotfiles/fedora/setup/setup.sh
+curl -O https://raw.githubusercontent.com/ThePhoDit/dotfiles/fedora/setup/setup.sh
 chmod u+x setup.sh
 bash setup.sh
 ```
