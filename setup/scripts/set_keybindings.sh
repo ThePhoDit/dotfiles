@@ -21,6 +21,7 @@ gsettings set org.gnome.desktop.wm.keybindings minimize "[]"
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys www "[]"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "[]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
 
 # Launch kitty terminal.
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'Launch Kitty'"
