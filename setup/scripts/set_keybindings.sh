@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-corner-nw "['<Super><Cont
 gsettings set org.gnome.desktop.wm.keybindings move-to-corner-se "['<Super><Control>K']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-corner-sw "['<Super><Control>J']"
 
-gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4', '<Super>C']"
+gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4', '<Super>C', '<Super>Q']"
 
 gsettings set org.gnome.desktop.wm.keybindings minimize "[]"
 
@@ -23,9 +23,13 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www "[]"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "[]"
 gsettings set org.gnome.settings-daemon.plugins.media-keys email "[]"
 
+# Pop Shell
+# Enter moving mode.
+gsettings set org.gnome.shell.extensions.pop-shell tile-enter "['<Super>backslash', '<Super>KP_Enter']"
+
 # Launch kitty terminal.
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'Launch Kitty'"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super>T'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super>Return'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'kitty'"
 
 # Launch web browser.
