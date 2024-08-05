@@ -127,6 +127,14 @@ bash scripts/patch_spotify.sh
 # Create conda environment for Jupyter.
 bash scripts/setup_jupyter.sh
 
+# Enable Synthing
+sudo systemctl enable "syncthing@$USER.service"
+sudo systemctl start "syncthing@$USER.service"
+
+# Enable ZeroTier
+sudo systemctl enable zerotier
+sudo systemctl start zerotier
+
 cd "$HOME"
 
 # Install user fonts.
