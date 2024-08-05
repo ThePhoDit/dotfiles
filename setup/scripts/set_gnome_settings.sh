@@ -32,3 +32,11 @@ gsettings set org.gnome.shell.extensions.pop-shell hint-color-rgba "rgba(13,165,
 gsettings set org.gnome.shell.extensions.pop-shell tile-by-default "true"
 # Set workspaces.
 gsettings set org.gnome.desktop.wm.preferences num-workspaces '5'
+
+# Set enabled extensions.
+gsettings set org.gnome.shell enabled-extensions \
+    "[ \
+        'launch-new-instance@gnome-shell-extensions.gcampax.github.com', \
+        'pop-shell@system76.com', \
+        'blur-my-shell@aunetx' \
+    ]"
