@@ -135,6 +135,9 @@ sudo systemctl start "syncthing@$USER.service"
 sudo systemctl enable zerotier
 sudo systemctl start zerotier
 
+# Set default browser.
+xdg-settings set default-web-browser librewolf.desktop
+
 cd "$HOME"
 
 # Install user fonts.
