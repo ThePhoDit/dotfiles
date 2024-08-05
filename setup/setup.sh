@@ -22,29 +22,27 @@ hostnamectl set-hostname "$host"
 cd "$HOME"
 
 # Choose how to clone the GitHub repo. If the user is the author of this script, with access to the repo with write permissions, an SSH key will be generated.
-echo -e "\n\nDo you want to clone the repo in HTTP mode? If not, SSH will be used, generating an SSH key. (Y/n)"
+echo -en "\nDo you want to clone the repo in HTTP mode? If not, SSH will be used, generating an SSH key. (Y/n): "
 
 while true ; do
-    echo -n "Response: "
     read clone_response
 
     # Cloning in HTTP mode.
-    if [[ "$clone_response" =~ [Yy] || "$clone_response" == "" ]] ; then
+    if [[ "$clone_response" =~ [Yy] || -z "$clone_response" ]] ; then
         git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git "$HOME/dotfiles"
         break
     # Cloning in SSH mode.
     elif [[ "$clone_response" =~ [Nn] ]] ; then
         if [[ -f "$HOME/.ssh/id_ed25519.pub" ]] ; then
-           	echo -e "\nDo you want to replace an already existing key? (y/N)"
+           	echo -n "Do you want to replace an already existing key? (y/N): "
 
             while true ; do
-                echo -n "Response: "
            	    read replace_key
 
                	if [[ "$replace_key" =~ [Yy] ]] ; then
               		ssh-keygen -t ed25519
                     break
-                elif [[ "$replace_key" =~ [Nn] || "$replace_key" == "" ]] ; then
+                elif [[ "$replace_key" =~ [Nn] || -z "$replace_key" ]] ; then
                     break
                	fi
             done
@@ -160,4 +158,56 @@ echo -e "\nSetting dotfiles..."
 cd "$HOME/dotfiles"
 stow .
 
-echo -e "\n\nInstallation complete!"
+# Enable autologin if an encrypted disk is found.
+echo -e "\nChecking partitions..."
+if lsblk | grep -q "crypt" ; then
+	echo "An encripted partition has been detected."
+	while true ; do
+		echo -n "Would you like to enable autologin for the current user? (y/N): "
+		read enable_auto_login
+		
+		if [[ "$enable_auto_login" =~ [Yy] ]] ; then
+			# Enables autologin in the config file, under the [daemon] line.
+			sudo sed -i "/\[daemon\]/a AutomaticLoginEnable=True\nAutomaticLogin=$USER" /etc/gdm/custom.conf
+			echo "Autologin has been enabled."
+			break
+		elif [[ "$enable_auto_login" =~ [Nn] || -z "$enable_auto_login" ]] ; then
+			echo "Autologin won't be enabled."
+			break
+		fi
+	done
+fi
+
+# Install NVidia drivers if card is found.
+echo -e "\nChecking for graphic cards..."
+if sudo lspci -v | grep -iq "nvidia" ; then
+	echo "A NVidia graphics card has been detected."
+	while true ; do
+		echo -n "Would you like to install propietary drivers for it? If your card has an old chipset please say 'N' as they will not work. (y/N): "
+		read install_nvidia_drivers
+		
+		if [[ "$install_nvidia_drivers" =~ [Yy] ]] ; then
+			sudo dnf install akmod-nvidia
+			while true ; do
+				echo -n "Install CUDA support? (y/N): "
+				read install_cuda
+				
+				if [[ "$install_cuda" =~ [Yy] ]] ; then
+					sudo dnf install xorg-x11-drv-nvidia-cuda
+					echo "CUDA support installed."
+					break
+				elif [[ "$install_cuda" =~ [Nn] || -z "$install_cuda" ]] ; then
+					echo "CUDA not installed."
+					break
+				fi
+			done
+			echo "Drivers have been installed."
+			break
+		elif [[ "$install_nvidia_drivers" =~ [Nn] || -z "$install_nvidia_drivers" ]] ; then
+			echo "Drivers won't be installed."
+			break
+		fi
+	done
+fi
+
+echo -e "\n\nInstallation complete!\nYou should reboot this PC now."

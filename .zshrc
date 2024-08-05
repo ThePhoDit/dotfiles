@@ -66,6 +66,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza -l'
 alias vim='nvim'
 alias c='clear'
+alias cat='bat'
 
 # Shell integrations
 eval "$(fzf --zsh)"

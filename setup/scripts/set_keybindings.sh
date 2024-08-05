@@ -37,11 +37,17 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ binding "'<Super>F'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ command "'nautilus'"
 
+# Launch Zed text editor.
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ name "'Launch Zed'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ binding "'<Super>E'"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command "'zed'"
+
 
 # Load all custom keybinds.
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
     "[ \
         '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/',
         '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', \
-        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/' \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', \
+        '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/' \
     ]"

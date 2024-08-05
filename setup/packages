@@ -5,6 +5,7 @@ kitty
 tmux
 neovim
 eza
+bat
 fzf
 zoxide
 curl
