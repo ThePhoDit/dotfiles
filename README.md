@@ -7,6 +7,9 @@ chmod u+x setup.sh
 bash setup.sh
 ```
 
-- Install GNOME Shell extensions:
-  * [Focus Changer](https://extensions.gnome.org/extension/4627/focus-changer/)
-  * [Launch New Instance](https://extensions.gnome.org/extension/600/launch-new-instance/)
+- Setup Synthing folders.
+- Download Librewolf extensions.
+  - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader)
+  - [XBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/)
+  - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/)
+  - Enable all filters for UBlock Origin.

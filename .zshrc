@@ -1,5 +1,6 @@
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+export PATH="${PATH}:${HOME}/.local/bin"
 
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -20,11 +21,12 @@ zinit light Aloxaf/fzf-tab
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
+zinit snippet OMZP::dnf
 zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
+zinit snippet OMZP::cp
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -32,7 +34,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Source prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+eval "$(oh-my-posh init zsh --config "$HOME/.config/ohmyposh/config.toml")"
 
 # Keybindings
 bindkey -e
@@ -54,14 +56,14 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Make match case insensitive.
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='eza -la'
+alias ls='eza -l'
 alias vim='nvim'
 alias c='clear'
 

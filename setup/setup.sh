@@ -30,7 +30,7 @@ while true ; do
 
     # Cloning in HTTP mode.
     if [[ "$clone_response" =~ [Yy] || "$clone_response" == "" ]] ; then
-        git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git
+        git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git "$HOME/dotfiles"
         break
     # Cloning in SSH mode.
     elif [[ "$clone_response" =~ [Nn] ]] ; then
@@ -144,65 +144,13 @@ rm "$fonts_path"/Fira*.zip
 # Reload fonts cache.
 fc-cache -fv
 
-# Other settings.
+# Set GNOME settings.
 echo -e "\nMaking additional changes..."
-# Set dark mode.
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-# Set timezone.
-timedatectl set-timezone Europe/Madrid
-# Set 24 hour clock format.
-gsettings set org.gnome.desktop.interface clock-format "'24h'"
-# Set keyboard layout.
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+intl')]"
-# Enable minimize and maximize buttons.
-gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
-# Disable hot corner.
-gsettings set org.gnome.desktop.interface enable-hot-corners "false"
-# Set power button behavior.
-gsettings set org.gnome.settings-daemon.plugins.power power-button-action "interactive"
-# Show battery percentage.
-gsettings set org.gnome.desktop.interface show-battery-percentage "true"
-# Set night light.
-gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled "true"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from "22.5"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from "7.0"
-gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature "2700"
-# Disable alert sounds.
-gsettings set org.gnome.desktop.sound event-sounds "false"
-
+bash scripts/set_gnome_settings.sh
 
 # Set keybinds.
 echo -e "\nSetting keybinds..."
-for i in {1..9} ; do
-    gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
-    gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
-    gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
-done
-
-# Placement keybinds.
-gsettings set org.gnome.desktop.wm.keybindings move-to-side-e "['<Super><Shift>L']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-side-w "['<Super><Shift>H']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-side-n "['<Super><Shift>K']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-side-s "['<Super><Shift>J']"
-
-gsettings set org.gnome.desktop.wm.keybindings move-to-corner-ne "['<Super><Control>L']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-corner-nw "['<Super><Control>H']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-corner-se "['<Super><Control>K']"
-gsettings set org.gnome.desktop.wm.keybindings move-to-corner-sw "['<Super><Control>J']"
-
-gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4', '<Super>C']"
-
-gsettings set org.gnome.desktop.wm.keybindings minimize "[]"
-
-# Launch kitty terminal.
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'Launch Kitty'"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super>Return'"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'kitty'"
-
-# Load all custom keybinds.
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
-    "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+bash scripts/set_keybinds.sh
 
 # Change user shell.
 chsh -s $(which zsh)

@@ -8,5 +8,5 @@ mkdir -p ~/.spotify-adblock && cp target/release/libspotifyadblock.so ~/.spotify
 mkdir -p ~/.config/spotify-adblock && cp config.toml ~/.config/spotify-adblock
 flatpak override --user --filesystem="~/.spotify-adblock/spotify-adblock.so" --filesystem="~/.config/spotify-adblock/config.toml" com.spotify.Client
 cp "$HOME/dotfiles/setup/desktop_entries/spotify.desktop" "$HOME/.local/share/applications/com.spotify.Client.desktop"
-rm -r spotify-adblock
+rm -rf spotify-adblock
 cd -
