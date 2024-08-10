@@ -67,6 +67,7 @@ alias ls='eza -l'
 alias vim='nvim'
 alias c='clear'
 alias cat='bat'
+alias gui='gitui'
 
 # Shell integrations
 eval "$(fzf --zsh)"
