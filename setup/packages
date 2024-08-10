@@ -15,7 +15,7 @@ nmap
 wireshark
 zed
 git
-bitwarden
+keepassxc
 librewolf
 unzip
 flat
@@ -31,3 +31,5 @@ zerotier-one
 gnome-shell-extension-pop-shell
 gnome-shell-extension-launch-new-instance
 gnome-shell-extension-blur-my-shell
+tor
+torbrowser-launcher
