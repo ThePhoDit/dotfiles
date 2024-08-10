@@ -34,3 +34,12 @@ gnome-shell-extension-blur-my-shell
 tor
 torbrowser-launcher
 gitui
+obs-studio
+qbittorrent
+signal-desktop
+noisetorch
+docker-ce
+docker-ce-cli
+containerd.io
+docker-buildx-plugin
+docker-compose-plugin

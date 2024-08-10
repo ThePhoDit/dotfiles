@@ -101,6 +101,10 @@ curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | sudo pkexec tee /etc/
 # Terra
 sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' --setopt='terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' terra-release
 
+# COPR Packages
+sudo dnf copr enable useidel/signal-desktop 
+sudo dnf copr enable principis/NoiseTorch
+
 # Install packages from the repos.
 echo -e "\nInstalling additional software..."
 sudo dnf install -y --skip-broken $(grep "^[^#]" packages)

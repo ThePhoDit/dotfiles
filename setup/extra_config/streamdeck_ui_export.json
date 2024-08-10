@@ -1,0 +1,197 @@
+{
+    "streamdeck_ui_version": 1,
+    "state": {
+        "BL44H1B04590": {
+            "buttons": {
+                "0": {
+                    "0": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "text_vertical_align": "",
+                        "text": "OBS",
+                        "switch_page": 2
+                    },
+                    "1": {
+                        "text": "Audio",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "switch_page": 6
+                    },
+                    "2": {
+                        "text": "Zerotier",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "switch_page": 7
+                    },
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "1": {
+                    "0": {
+                        "text": "",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "keys": "",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "text": "SCENES",
+                        "switch_page": 3
+                    },
+                    "2": {
+                        "command": "",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "text": "FUENTES",
+                        "switch_page": 5
+                    },
+                    "3": {
+                        "keys": "",
+                        "text": "RECORD",
+                        "command": "xdotool key ctrl+shift+r",
+                        "text_vertical_align": "",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Record.png"
+                    },
+                    "4": {
+                        "text": "STREAM",
+                        "write": "",
+                        "keys": "",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Stream.png",
+                        "command": "xdotool key ctrl+super+alt+shift+s"
+                    },
+                    "5": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "text": "AUDIO",
+                        "switch_page": 4
+                    }
+                },
+                "2": {
+                    "0": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png",
+                        "switch_page": 2
+                    },
+                    "1": {
+                        "text": "TRANSITION",
+                        "command": "xdotool key ctrl+super+alt+shift+t",
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Transition.png"
+                    },
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "3": {
+                    "0": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png",
+                        "switch_page": 2
+                    },
+                    "1": {
+                        "text": "MUTE",
+                        "command": "xdotool key ctrl+super+shift+m",
+                        "keys": "",
+                        "write": ""
+                    },
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "4": {
+                    "0": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png",
+                        "switch_page": 2
+                    },
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "5": {
+                    "0": {
+                        "switch_page": 1,
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png"
+                    },
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "6": {
+                    "0": {
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "text": "C - Mario",
+                        "text_vertical_align": "",
+                        "command": "zerotier-cli join a0cbf4b62a06cae5"
+                    },
+                    "2": {
+                        "text": "D - Mario",
+                        "command": "zerotier-cli leave a0cbf4b62a06cae5"
+                    },
+                    "3": {
+                        "text": "List",
+                        "command": "/home/mario/Apps/zerotier-list.sh",
+                        "write": "",
+                        "keys": ""
+                    },
+                    "4": {
+                        "switch_page": 8,
+                        "icon": "/home/mario/Pictures/StreamDeck Images/FolderDark.png",
+                        "text": "Others"
+                    },
+                    "5": {
+                        "text": "",
+                        "command": ""
+                    }
+                },
+                "7": {
+                    "0": {
+                        "switch_page": 7,
+                        "icon": "/home/mario/Pictures/StreamDeck Images/Back.png"
+                    },
+                    "1": {
+                        "text": "C - Services",
+                        "command": "zerotier-cli join 1c33c1ced0f8cc1d"
+                    },
+                    "2": {
+                        "keys": "",
+                        "text": "D - Services",
+                        "command": "zerotier-cli leave 1c33c1ced0f8cc1d"
+                    },
+                    "3": {
+                        "text": "C - Paul",
+                        "command": "",
+                        "write": "sudo zerotier-cli join 565799d8f674759a"
+                    },
+                    "4": {
+                        "command": "sudo zerotier-cli leave 565799d8f674759a",
+                        "text": "D - Paul",
+                        "write": ""
+                    },
+                    "5": {}
+                },
+                "8": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "9": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                }
+            },
+            "page": 0,
+            "display_timeout": 0,
+            "brightness": 76,
+            "brightness_dimmed": 0
+        }
+    }
+}

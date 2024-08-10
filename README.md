@@ -34,3 +34,10 @@ bash setup.sh
 	- R
 	- Haskell
 	- AsciiDoc
+	
+	
+## TODO
+
+[] Install streamdeck and enable it to auto start.
+[] Figure a way to maybe import sensitive files that cannot go on GitHub.
+[] Prettify the code with a go script.
