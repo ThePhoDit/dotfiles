@@ -22,3 +22,4 @@ jobs:
         project_path: ./setup/
         md5sum: true
         sha256sum: true
+        compress_assets: OFF
