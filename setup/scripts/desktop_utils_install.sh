@@ -9,3 +9,6 @@ flatpak install flathub xyz.z3ntu.razergenie
 
 # Control Streamdeck.
 flatpak install flathub com.feaneron.Boatswain
+
+# OpenTabletDriver
+flatpak install flathub net.opentabletdriver.OpenTabletDriver

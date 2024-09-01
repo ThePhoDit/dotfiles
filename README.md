@@ -40,3 +40,5 @@ bash setup.sh
 
 [] Install streamdeck and enable it to auto start.
 [] Figure a way to maybe import sensitive files that cannot go on GitHub.
+
+[] MultiMC, Crypto wallets?, veracrypt  
