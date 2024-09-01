@@ -23,4 +23,4 @@ jobs:
         md5sum: true
         sha256sum: true
         compress_assets: OFF
-        asset_name: dotfiles
+        asset_name: dotfiles-script

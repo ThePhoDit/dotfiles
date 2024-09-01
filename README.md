@@ -3,11 +3,11 @@
 - Run the setup script from the home directory.
 ```bash
 curl -O https://raw.githubusercontent.com/ThePhoDit/dotfiles/fedora/setup/setup.sh
-curl -O https://github.com/ThePhoDit/dotfiles/releases/latest/download/dotfiles-linux-amd64
-chmod u+x dotfiles-linux-amd64
+curl -O https://github.com/ThePhoDit/dotfiles/releases/latest/download/dotfiles-script
+chmod u+x dotfiles-script
 dotfiles-linux-amd64
 bash setup.sh
-rm dotfiles-linux-amd64 setup.sh
+rm dotfiles-script setup.sh
 ```
 
 - Setup ZeroTier.
