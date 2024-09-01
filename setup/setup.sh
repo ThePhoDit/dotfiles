@@ -54,7 +54,7 @@ cd "$HOME"
 if [[ "$cloneInHttpMode" == "true" ]] ; then
 	git clone --branch fedora https://github.com/ThePhoDit/dotfiles.git "$HOME/dotfiles"
 else
-	if [[ "$createSshKey" ]] ; then
+	if [[ "$createSshKey" == "true" ]] ; then
 		ssh-keygen -t ed25519 -f "$sshPrivKeyFile"
 	fi
 	
