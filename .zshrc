@@ -68,6 +68,7 @@ alias vim='nvim'
 alias c='clear'
 alias cat='bat'
 alias gui='gitui'
+alias update="bash $HOME/dotfiles/setup/scripts/system_update.sh"
 
 # Shell integrations
 eval "$(fzf --zsh)"

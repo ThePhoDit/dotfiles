@@ -1,0 +1,8 @@
+asd
+true
+true
+true
+/home/mario/.ssh/id_ed25519
+false
+true
+base

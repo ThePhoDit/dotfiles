@@ -1,2 +1,2 @@
-sudo dnf --refresh upgrade
-sudo flatpak update
+sudo dnf --refresh -y upgrade
+sudo flatpak -y update
