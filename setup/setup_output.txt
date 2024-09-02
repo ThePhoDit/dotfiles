@@ -1,0 +1,7 @@
+
+false
+true
+true
+/home/mario/.ssh/id_ed25519
+false
+false

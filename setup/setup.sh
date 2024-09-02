@@ -170,6 +170,8 @@ rm "$fonts_path"/Fira*.zip
 # Reload fonts cache.
 fc-cache -fv
 
+cd "$HOME/dotfiles/setup"
+
 # Set GNOME settings.
 echo -e "\nMaking additional changes..."
 bash scripts/set_gnome_settings.sh
