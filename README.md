@@ -3,9 +3,9 @@
 - Run the setup script from the home directory.
 ```bash
 curl -O https://raw.githubusercontent.com/ThePhoDit/dotfiles/fedora/setup/setup.sh
-curl -O https://github.com/ThePhoDit/dotfiles/releases/latest/download/dotfiles-script
+wget https://github.com/ThePhoDit/dotfiles/releases/latest/download/dotfiles-script
 chmod u+x dotfiles-script
-dotfiles-linux-amd64
+./dotfiles-script
 bash setup.sh
 rm dotfiles-script setup.sh
 ```
@@ -38,11 +38,11 @@ rm dotfiles-script setup.sh
 	- R
 	- Haskell
 	- AsciiDoc
-	
-	
+
+
 ## TODO
 
 [] Install streamdeck and enable it to auto start.
 [] Figure a way to maybe import sensitive files that cannot go on GitHub.
-
-[] MultiMC, Crypto wallets?, veracrypt  
+[] Zed settings sync
+[] MultiMC, Crypto wallets?, veracrypt
