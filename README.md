@@ -44,5 +44,6 @@ rm dotfiles-script setup.sh
 
 [] Install streamdeck and enable it to auto start.
 [] Figure a way to maybe import sensitive files that cannot go on GitHub.
-[] Zed settings sync
+[x] Zed settings sync
+[] Review Razer app not detecting devices.
 [] MultiMC, Crypto wallets?, veracrypt
