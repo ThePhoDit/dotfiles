@@ -28,14 +28,14 @@ while IFS= read -r line; do
     i=$((i + 1))
   else
     # No more custom variable names - handle accordingly (e.g., break the loop)
-    break 
+    break
   fi
 done < "$temp_file"
 
 rm setup_output.txt
 
 # All variables set.
- 
+
 set -e
 
 # Configure DNF settings.
@@ -57,7 +57,7 @@ else
 	if [[ "$createSshKey" == "true" ]] ; then
 		ssh-keygen -t ed25519 -f "$sshPrivKeyFile"
 	fi
-	
+
 	# Display public key so it can be imported into GitHub.
     echo -e "\n You are now going to be shown your public key. Copy it and add it to your GitHub account."
     if [[ "$sshPrivKeyFile" != *.pub ]] ; then
@@ -65,7 +65,7 @@ else
     else
     	sshPubKeyFile="${sshPrivKeyFile}"
     fi
-	
+
     echo -e "\n When you are done, press any key.\n"
     cat "$sshPubKeyFile"
     read dummy
@@ -95,6 +95,9 @@ sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasev
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
 
+# Librewolf Repo
+sudo curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
+
 # COPR Packages
 sudo dnf copr enable principis/NoiseTorch
 
@@ -107,7 +110,7 @@ for group in "$packageGroups" ; do
 
 			# Install Flatpak packages.
 			bash scripts/flatpak_install.sh
-			
+
 			# Change back to the home directory.
 			cd "$HOME"
 
@@ -202,7 +205,7 @@ if [[ "$enableNvidiaDrivers" == "true" ]] ; then
 	while true ; do
 		echo -n "Install CUDA support? (y/N): "
 		read install_cuda
-				
+
 		if [[ "$install_cuda" =~ [Yy] ]] ; then
 			sudo dnf install xorg-x11-drv-nvidia-cuda
 			echo "CUDA support installed."
