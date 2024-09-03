@@ -39,12 +39,17 @@ rm dotfiles-script setup.sh
 	- R
 	- Haskell
 	- AsciiDoc
+	
+	
+# How to sync actual dotfiles without installation.
+
+```bash
+cd ~/dotfiles
+stow .
+```
 
 
 ## TODO
 
-[x] Install streamdeck and enable it to auto start.
-[] Figure a way to maybe import sensitive files that cannot go on GitHub.
-[x] Zed settings sync
-[] Review Razer app not detecting devices.
-[] MultiMC, Crypto wallets?, veracrypt
+- Figure a way to maybe import sensitive files that cannot go on GitHub.
+- MultiMC, Crypto wallets?, veracrypt
