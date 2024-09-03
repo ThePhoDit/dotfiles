@@ -48,8 +48,15 @@ cd ~/dotfiles
 stow .
 ```
 
+This was inspired by 
+- [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
+- [This Zsh config is perhaps my favorite one yet](https://www.youtube.com/watch?v=ud7YxC33Z3w)
+- [Five of my favorite project ideas to learn Go](https://www.youtube.com/watch?v=gXmznGEW9vo)
+
+Thanks Elliott!
 
 ## TODO
 
 - Figure a way to maybe import sensitive files that cannot go on GitHub.
 - MultiMC, Crypto wallets?, veracrypt
+- StreamDeck pages export/sync
