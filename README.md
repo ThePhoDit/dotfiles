@@ -20,6 +20,7 @@ rm dotfiles-script setup.sh
   - [XBrowserSync](https://addons.mozilla.org/en-US/firefox/addon/xbs/)
   - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/)
   - [Decetralayes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)
+  - [KeePass-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
   - Enable all filters for UBlock Origin.
 
 - Install Zed extensions.
@@ -42,7 +43,7 @@ rm dotfiles-script setup.sh
 
 ## TODO
 
-[] Install streamdeck and enable it to auto start.
+[x] Install streamdeck and enable it to auto start.
 [] Figure a way to maybe import sensitive files that cannot go on GitHub.
 [x] Zed settings sync
 [] Review Razer app not detecting devices.
