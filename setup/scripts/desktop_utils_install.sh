@@ -35,7 +35,7 @@ chmod u+x bin/MultiMC
 cd "$HOME"
 
 cp dotfiles/setup/desktop_entries/multimc.desktop "$HOME/.local/share/applications/multimc.desktop"
-echo "Exec=$HOME/Apps/MultiMC/bin/MultiMC" >> "$HOME/.local/share/applications/multimc.desktop"
+echo -e "\nExec=$HOME/Apps/MultiMC/bin/MultiMC" >> "$HOME/.local/share/applications/multimc.desktop"
 echo "Icon=$HOME/Apps/MultiMC/infinity32.png" >> "$HOME/.local/share/applications/multimc.desktop"
 
 cd PREV_DIR
