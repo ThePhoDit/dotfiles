@@ -73,3 +73,5 @@ alias update="bash $HOME/dotfiles/setup/scripts/system_update.sh"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+[ -s "/home/mario/.jabba/jabba.sh" ] && source "/home/mario/.jabba/jabba.sh"
