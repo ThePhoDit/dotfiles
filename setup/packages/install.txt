@@ -45,3 +45,4 @@ docker-compose-plugin
 librewolf
 hugo
 qt5-qtbase
+rstudio
