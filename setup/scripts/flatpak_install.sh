@@ -2,13 +2,13 @@
 
 
 # Install Spotify.
-sudo flatpak install flathub com.spotify.Client
+sudo flatpak install -y flathub com.spotify.Client
 
 # Install Signal.
-flatpak install flathub org.signal.Signal
+flatpak install -y flathub org.signal.Signal
 
 # Install IntelliJ Idea Ultimate.
-flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Ultimate
 
 # TODO: Install Discord.
-flatpak install flathub com.discordapp.Discord
+flatpak install -y flathub com.discordapp.Discord
