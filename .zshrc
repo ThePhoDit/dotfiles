@@ -69,7 +69,7 @@ alias c='clear'
 alias cat='bat'
 alias gui='gitui'
 alias update="bash $HOME/dotfiles/setup/scripts/system_update.sh"
-alias jup='conda activate Jupyer && jupyter lab'
+alias jup='conda activate Jupyter && jupyter lab'
 
 # Shell integrations
 eval "$(fzf --zsh)"
