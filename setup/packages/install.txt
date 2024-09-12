@@ -31,6 +31,7 @@ zerotier-one
 gnome-shell-extension-pop-shell
 gnome-shell-extension-launch-new-instance
 gnome-shell-extension-blur-my-shell
+gnome-shell-extension-caffeine
 tor
 torbrowser-launcher
 gitui
@@ -46,3 +47,4 @@ librewolf
 hugo
 qt5-qtbase
 rstudio
+
