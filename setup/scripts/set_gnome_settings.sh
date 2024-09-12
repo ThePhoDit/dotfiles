@@ -38,5 +38,6 @@ gsettings set org.gnome.shell enabled-extensions \
     "[ \
         'launch-new-instance@gnome-shell-extensions.gcampax.github.com', \
         'pop-shell@system76.com', \
-        'blur-my-shell@aunetx' \
+        'blur-my-shell@aunetx', \
+        'caffeine@patapon.info' \
     ]"
