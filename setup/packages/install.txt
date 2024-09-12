@@ -47,4 +47,5 @@ librewolf
 hugo
 qt5-qtbase
 rstudio
+rstudio-desktop
 
