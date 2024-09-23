@@ -48,5 +48,8 @@ hugo
 qt5-qtbase
 rstudio
 rstudio-desktop
+<<<<<<< HEAD
 tmux
-meld
+=======
+>>>>>>> 2416c1caf19edd0408c04bf6f1dbc88ae41fb78d
+

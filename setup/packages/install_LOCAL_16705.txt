@@ -49,4 +49,4 @@ qt5-qtbase
 rstudio
 rstudio-desktop
 tmux
-meld
+
