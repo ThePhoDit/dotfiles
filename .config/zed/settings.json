@@ -29,5 +29,11 @@
 		"enabled": true
 	},
 	"hour_format": "hour24",
-	"buffer_font_family": "Zed Plex Mono"
+	"buffer_font_family": "Zed Plex Mono",
+	"languages": {
+		"Python": {
+			"tab_size": 4,
+			"hard_tabs": true
+		}
+	}
 }
