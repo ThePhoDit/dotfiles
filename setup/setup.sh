@@ -100,6 +100,7 @@ sudo curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/
 
 # COPR Packages
 sudo dnf copr enable principis/NoiseTorch
+sudo dnf copr enable iucar/rstudio
 
 for group in $packageGroups ; do
 	case "$group" in
