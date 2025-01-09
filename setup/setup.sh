@@ -125,6 +125,9 @@ for group in $packageGroups ; do
 			# Create conda environment for Jupyter.
 			bash scripts/setup_jupyter.sh
 
+			# Install NVM
+			wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
 			# Enable Synthing
 			sudo systemctl enable "syncthing@$USER.service"
 			sudo systemctl start "syncthing@$USER.service"

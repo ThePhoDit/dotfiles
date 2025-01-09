@@ -7,7 +7,19 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-	"vim_mode": true,
+	"assistant": {
+  "version": "2",
+  "default_model": {
+      "provider": "openai",
+      "model": "gpt-4o"
+    }
+ },
+ "languages": {
+  "Python": {
+   "show_inline_completions": true
+  }
+ },
+ "vim_mode": true,
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false
