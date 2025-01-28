@@ -70,6 +70,7 @@ alias cat='bat'
 alias gui='gitui'
 alias update="bash $HOME/dotfiles/setup/scripts/system_update.sh"
 alias jup='conda activate Jupyter && jupyter lab'
+alias matlab='~/Apps/matlab/bin/matlab &'
 
 # Shell integrations
 eval "$(fzf --zsh)"
