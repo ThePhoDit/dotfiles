@@ -71,6 +71,7 @@ alias gui='gitui'
 alias update="bash $HOME/dotfiles/setup/scripts/system_update.sh"
 alias jup='conda activate Jupyter && jupyter lab'
 alias matlab='~/Apps/matlab/bin/matlab &'
+alias xterm="xterm -fa 'Monospace' -fs 36"
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -81,3 +82,5 @@ eval "$(zoxide init --cmd cd zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
