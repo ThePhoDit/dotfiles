@@ -19,4 +19,7 @@ network_id=interface_name
 	- Sidebery
 10. Enable access to all devices for LibreWolf in Flatseal
 11. Enable access to all devices for Ungoogled Chromium in Flatseal
-12. Import Sidebery settings
+12. Import Sidebery settings (`other_files/sidebery.json`)
+13. Disable LibreWolf's navbar:
+	1. Enable `toolkit.legacyUserProfileCustomizations.stylesheets` in about:config.
+	2. In 'Profile Directory' (`Firefox Menu > Help > Troubleshooting Information > Profile Directory`) create folder chrome with file `other_files/userChrome.css`. Note that the profile folder might not be directly opened, but the directory with all profiles. Choose correctly.
