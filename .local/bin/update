@@ -1,0 +1,2 @@
+sudo dnf --refresh -y update
+flatpak update

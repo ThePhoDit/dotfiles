@@ -1,0 +1,10 @@
+io.gitlab.librewolf-community
+org.keepassxc.KeePassXC
+org.signal.Signal
+com.vscodium.codium
+org.libreoffice.LibreOffice
+com.chirpmyradio.chirp
+com.calibre_ebook.calibre
+org.localsend.localsend_app
+io.github.ungoogled_software.ungoogled_chromium
+com.github.tchx84.Flatseal

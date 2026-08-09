@@ -1,0 +1,26 @@
+#! /bin/bash
+
+shutdown="Shutdown"
+reboot="Reboot"
+lock="Lock"
+suspend="Suspend"
+logout="Logout"
+
+yes="Yes"
+no="No"
+
+option=$( printf "$shutdown\n$reboot\n$lock\n$suspend\n$logout" | rofi -dmenu -i -p "What do you want to do?" )
+
+[ -z "$option" ] && exit 0
+
+confirmation=$( printf "$yes\n$no" | rofi -dmenu -i -p "Are you sure?" )
+
+if [ "$confirmation" = "$yes" ]; then
+	case "$option" in
+		"$shutdown") systemctl poweroff ;;
+		"$reboot") systemctl reboot ;;
+		"$suspend") systemctl suspend ;;
+		"$lock") swaylock ;;
+		"$logout") swaymsg exit ;;
+	esac
+fi
