@@ -12,3 +12,11 @@ network_id=interface_name
 5. Setup git credentials
 6. Setup `.ssh/config`
 7. Create ssh keys
+8. Configure ublock filter lists. Enable it all but cookie notices, social widgets, regions and experimental lists
+9. Install rest of extensions:
+	- XBrowserSync
+	- LibRedirect
+	- Sidebery
+10. Enable access to all devices for LibreWolf in Flatseal
+11. Enable access to all devices for Ungoogled Chromium in Flatseal
+12. Import Sidebery settings
