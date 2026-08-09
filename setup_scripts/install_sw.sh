@@ -1,11 +1,5 @@
 #! /bin/bash
 
-# Set hostname
-
-echo "Set the hostname:\n"
-read DESIRED_HOSTNAME 
-sudo hostnamectl set-hostname $DESIRED_HOSTNAME
-
 # Add flatpak repos and install packages
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
