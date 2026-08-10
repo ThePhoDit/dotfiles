@@ -2,7 +2,7 @@
 
 # Set hostname
 
-echo "Set the hostname:\n"
+echo "Set the hostname:"
 read DESIRED_HOSTNAME 
 sudo hostnamectl set-hostname $DESIRED_HOSTNAME
 
@@ -19,8 +19,7 @@ sudo cp $HOME/dotfiles/other_files/logind.conf /etc/systemd/logind.conf
 
 # Change shell
 
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+chsh -s /bin/fish
 
 # Reboot
 sudo reboot
