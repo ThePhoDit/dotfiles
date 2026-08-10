@@ -1,5 +1,8 @@
 # Configuration guide for MY Fedora Sway setup
 
+> [!IMPORTANT]
+> Install Nvidia drivers if needed: https://github.com/fady-saied/Nvidia-Fedora-Guide
+
 1. Git clone this repo in your $HOME
 2. Run the `setup_scripts/setup.sh` script
 3. Join de ZeroTier networks and set the interface name in `/var/lib/zerotier-one/devicemap`
