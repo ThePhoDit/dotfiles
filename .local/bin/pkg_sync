@@ -1,0 +1,9 @@
+#! /bin/bash
+
+cd $HOME/dotfiles
+git pull
+
+cd setup_scripts/apps
+
+sudo dnf install -y $( cat dnf.txt )
+flatpak install -y flathub $( cat flatpak.txt )

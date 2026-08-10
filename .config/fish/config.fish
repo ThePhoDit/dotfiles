@@ -9,3 +9,7 @@ set -g fish_greeting
 function update
 	bash $HOME/.local/bin/update
 end
+
+function pkg_sync
+	bash $HOME/.local/bin/pkg_sync
+end
