@@ -13,6 +13,10 @@ if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bas
 
 # Install dnf packages
 
-sudo dnf install $( cat $HOME/dotfiles/setup_scripts/apps/dnf.txt )
+sudo dnf install -y $( cat $HOME/dotfiles/setup_scripts/apps/dnf.txt )
 
 sudo systemctl enable --now syncthing@mario
+
+# Remove firefox
+
+sudo dnf remove -y firefox

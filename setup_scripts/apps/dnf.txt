@@ -1,3 +1,4 @@
 syncthing
 stow
 gvfs-mtp
+fish

@@ -13,3 +13,8 @@ bash $HOME/dotfiles/setup_scripts/install_sw.sh
 # Configure dotfiles
 cd $HOME/dotfiles
 stow .
+
+# Change shell
+
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
