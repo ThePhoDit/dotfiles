@@ -28,4 +28,6 @@ network_id=interface_name
 13. Disable LibreWolf's navbar:
 	1. Enable `toolkit.legacyUserProfileCustomizations.stylesheets` in about:config.
 	2. In 'Profile Directory' (`Firefox Menu > Help > Troubleshooting Information > Profile Directory`) create folder chrome with file `other_files/userChrome.css`. Note that the profile folder might not be directly opened, but the directory with all profiles. Choose correctly. Symbolic links do not work with flatpak.
-14. If needed, configure restic backups (files not in repo, but syncthing)
+	3. Only show bookmarks on new tab
+14. Import LibRedirect settings (`other_files/libredirect_settings.json`)
+15. If needed, configure restic backups (scripts not in repo, but syncthing)
