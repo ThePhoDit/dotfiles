@@ -226,6 +226,13 @@ bindsym $mod+Shift+b exec "flatpak run io.gitlab.librewolf-community"
 
 bindsym $mod+Shift+f exec thunar
 
+# Take screenshots:
+    set $screenshot_out $(xdg-user-dir PICTURES)/screenshots/screenshot-$(date +"%Y%m%d-%H%M%S").png
+    bindsym $mod+Print exec "grimshot save screen $screenshot_out"
+    bindsym $mod+Shift+Print exec "grimshot save active $screenshot_out"
+    bindsym $mod+Shift+s exec "grimshot copy area"
+    bindsym $mod+Shift+p exec "grim -g "$(slurp -p)" -t ppm - | magick - -format '%[pixel:p{0,0}]' txt:-"
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
