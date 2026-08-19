@@ -21,5 +21,11 @@ sudo cp $HOME/dotfiles/other_files/logind.conf /etc/systemd/logind.conf
 
 chsh -s /bin/fish
 
+# Setup default browser
+
+xdg-mime default io.gitlab.librewolf-community.desktop x-scheme-handler/http
+xdg-mime default io.gitlab.librewolf-community.desktop x-scheme-handler/https
+xdg-mime default io.gitlab.librewolf-community.desktop text/html
+
 # Reboot
 sudo reboot
