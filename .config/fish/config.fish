@@ -13,3 +13,6 @@ end
 function pkg_sync
 	bash $HOME/.local/bin/pkg_sync
 end
+
+# uv
+fish_add_path "/home/mario/.local/bin"
