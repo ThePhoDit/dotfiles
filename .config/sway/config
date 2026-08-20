@@ -38,7 +38,7 @@ output eDP-1 resolution 1920x1080 position 1920,0
 # Desktop
 output HDMI-A-1 resolution 1920x1080 position 0,0
 
-output HDMI-A-2 resolution 1920x1080 position -1920,0
+output HDMI-A-2 resolution 1920x1080 position 1920,0
 
 ### Input configuration
 
