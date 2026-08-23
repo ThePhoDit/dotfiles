@@ -4,3 +4,4 @@ gvfs-mtp
 fish
 restic
 uv
+gcc
