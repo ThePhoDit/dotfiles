@@ -5,3 +5,6 @@ fish
 restic
 uv
 gcc
+make
+nmap
+python3.14-devel
