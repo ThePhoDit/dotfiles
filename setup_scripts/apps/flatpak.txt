@@ -10,3 +10,4 @@ io.github.ungoogled_software.ungoogled_chromium
 com.github.tchx84.Flatseal
 es.gob.afirma
 com.obsproject.Studio
+flatpak install flathub md.obsidian.Obsidian
