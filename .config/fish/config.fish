@@ -14,5 +14,12 @@ function pkg_sync
 	bash $HOME/.local/bin/pkg_sync
 end
 
+function jup
+	cd Projects/jupyter
+	source .venv/bin/activate.fish
+	cd
+	jupyter lab
+end
+
 # uv
 fish_add_path "/home/mario/.local/bin"
