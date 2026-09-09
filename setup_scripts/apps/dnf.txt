@@ -8,3 +8,5 @@ gcc
 make
 nmap
 python3.14-devel
+java-25-openjdk
+java-25-openjdk-devel
