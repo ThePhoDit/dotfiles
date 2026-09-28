@@ -1,7 +1,6 @@
 io.gitlab.librewolf-community
 org.keepassxc.KeePassXC
 org.signal.Signal
-com.vscodium.codium
 org.libreoffice.LibreOffice
 com.chirpmyradio.chirp
 com.calibre_ebook.calibre
