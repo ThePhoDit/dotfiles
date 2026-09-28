@@ -11,3 +11,6 @@ python3.14-devel
 java-25-openjdk
 java-25-openjdk-devel
 codium
+pdflatex
+pandoc
+texlive-scheme-medium
