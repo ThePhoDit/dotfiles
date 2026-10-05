@@ -28,7 +28,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 # Wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 
-output * bg /usr/share/backgrounds/default.jxl fill
+# output * bg /usr/share/backgrounds/default.jxl fill
+output * bg /home/mario/Pictures/Wallpapers/Graduation.jpg fill
 
 # Screens. See info with swaymsg -t get_outputs
 
@@ -51,6 +52,7 @@ input type:touchpad {
 	natural_scroll enabled
 	middle_emulation enabled
 	accel_profile flat
+	drag_lock disable
 }
 
 input type:keyboard {
