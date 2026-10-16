@@ -23,3 +23,9 @@ end
 
 # uv
 fish_add_path "/home/mario/.local/bin"
+
+# Change editor
+set -gx EDITOR /usr/bin/vi
+
+# Setup zoxide
+zoxide init fish | source
