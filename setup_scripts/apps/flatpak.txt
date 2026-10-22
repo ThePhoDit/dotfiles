@@ -11,3 +11,4 @@ es.gob.afirma
 com.obsproject.Studio
 md.obsidian.Obsidian
 org.gnome.Evince
+org.zotero.Zotero

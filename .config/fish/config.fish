@@ -28,4 +28,4 @@ fish_add_path "/home/mario/.local/bin"
 set -gx EDITOR /usr/bin/vi
 
 # Setup zoxide
-zoxide init fish | source
+zoxide init --cmd cd fish | source
