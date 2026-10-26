@@ -33,3 +33,17 @@ network_id=interface_name
 15. If needed, configure restic backups (scripts not in repo, but syncthing)
 16. If needed, install Matlab with MVM
 17. Setup the jupyter environment with uv
+
+## Additional Nvidia configuration
+
+This commands ensure screens wake after the PC goes to sleep.
+
+```bash
+sudo systemctl enable nvidia-suspend.service
+sudo systemctl enable nvidia-resume.service
+```
+
+If `/etc/modprobe.d/nvidia-power-management.conf` does not exist:
+
+```bash
+echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1" | sudo tee /etc/modprobe.d/nvidia-power-management.conf```
