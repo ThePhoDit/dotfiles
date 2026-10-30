@@ -47,3 +47,8 @@ If `/etc/modprobe.d/nvidia-power-management.conf` does not exist:
 
 ```bash
 echo "options nvidia NVreg_PreserveVideoMemoryAllocations=1" | sudo tee /etc/modprobe.d/nvidia-power-management.conf```
+
+```bash
+sudo grubby --update-kernel=ALL --args="NVreg_PreserveVideoMemoryAllocations=1"
+sudo dracut --force
+```
