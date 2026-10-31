@@ -32,4 +32,7 @@ sudo systemctl enable --now syncthing@mario
 
 sudo dnf remove -y firefox
 
+# Install jupyter env
 
+uv venv --python 3.14 ~/.venvs/jupyter
+uv pip install --python ~/.venvs/jupyter/bin/python jupyterlab ipykernel pandas matplotlib scipy scikit-learn opencv-python mediapipe torch torchvision
