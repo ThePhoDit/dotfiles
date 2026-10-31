@@ -29,3 +29,7 @@ set -gx EDITOR /usr/bin/vi
 
 # Setup zoxide
 zoxide init --cmd cd fish | source
+
+# UV aliases
+alias jupi="uv pip install --python ~/.venvs/jupyter/bin/python"
+alias jup="~/.venvs/jupyter/bin/jupyter lab "
