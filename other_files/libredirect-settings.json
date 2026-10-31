@@ -8,7 +8,7 @@
     "redirectOnlyInIncognito": false
   },
   "invidious": [
-    "https://inv.nadeko.net"
+    "https://invidious.tiekoetter.com"
   ],
   "materialious": [
     "https://app.materialio.us"
@@ -41,7 +41,8 @@
     "enabled": false,
     "frontend": "hyperpipe",
     "unsupportedUrls": "bypass",
-    "redirectOnlyInIncognito": false
+    "redirectOnlyInIncognito": false,
+    "redirectType": "main_frame"
   },
   "ytifyMusic": [
     "https://ytify.pp.ua"
@@ -51,7 +52,7 @@
   ],
   "invidiousMusic": [],
   "twitter": {
-    "enabled": false,
+    "enabled": true,
     "redirectType": "main_frame",
     "unsupportedUrls": "bypass",
     "frontend": "nitter",
@@ -59,7 +60,7 @@
     "redirectOnlyInIncognito": false
   },
   "nitter": [
-    "https://nitter.privacydev.net"
+    "https://shitter.thepixora.com"
   ],
   "chatGpt": {
     "enabled": false,
@@ -89,7 +90,7 @@
   },
   "libreddit": [],
   "redlib": [
-    "https://safereddit.com"
+    "https://r.naa.gg"
   ],
   "teddit": [],
   "eddrit": [
@@ -139,7 +140,8 @@
     "embedFrontend": "kittygram",
     "unsupportedUrls": "bypass",
     "instance": "public",
-    "redirectOnlyInIncognito": false
+    "redirectOnlyInIncognito": false,
+    "redirectType": "main_frame"
   },
   "kittygram": [
     "https://kittygram.irelephant.net"
@@ -152,7 +154,8 @@
     "unsupportedUrls": "bypass",
     "frontend": "libremdb",
     "instance": "public",
-    "redirectOnlyInIncognito": false
+    "redirectOnlyInIncognito": false,
+    "redirectType": "main_frame"
   },
   "libremdb": [
     "https://libremdb.iket.me"
@@ -500,7 +503,8 @@
     "enabled": false,
     "unsupportedUrls": "bypass",
     "frontend": "jitsi",
-    "redirectOnlyInIncognito": false
+    "redirectOnlyInIncognito": false,
+    "redirectType": "main_frame"
   },
   "jitsi": [],
   "sendFiles": {
