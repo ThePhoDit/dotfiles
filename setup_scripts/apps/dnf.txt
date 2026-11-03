@@ -16,3 +16,4 @@ pandoc
 texlive-scheme-medium
 fuse-libs
 zoxide
+newsboat
