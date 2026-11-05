@@ -2,3 +2,4 @@
 
 .local/bin/python*
 **/*.db
+.config/aerc/accounts.conf

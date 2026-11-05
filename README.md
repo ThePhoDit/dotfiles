@@ -32,7 +32,7 @@ network_id=interface_name
 14. Import LibRedirect settings (`other_files/libredirect_settings.json`)
 15. If needed, configure restic backups (scripts not in repo, but syncthing)
 16. If needed, install Matlab with MVM
-17. Setup the jupyter environment with uv
+17. Configure aerc accounts
 
 ## Additional Nvidia configuration
 
