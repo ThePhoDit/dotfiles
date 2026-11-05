@@ -32,7 +32,7 @@ network_id=interface_name
 14. Import LibRedirect settings (`other_files/libredirect_settings.json`)
 15. If needed, configure restic backups (scripts not in repo, but syncthing)
 16. If needed, install Matlab with MVM
-17. Configure aerc accounts
+17. Configure aerc accounts (ln -s from syncthing folder to .config)
 
 ## Additional Nvidia configuration
 
