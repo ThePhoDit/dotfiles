@@ -32,6 +32,9 @@ network_id=interface_name
 14. Import LibRedirect settings (`other_files/libredirect_settings.json`)
 15. If needed, configure restic backups (scripts not in repo, but syncthing)
 16. If needed, install Matlab with MVM
+```
+./mpm install --release=R2026b --destination=/home/<USER>/matlab --products=Simulink Deep_Learning_Toolbox_Model_for_ResNet-50_Network Computer_Vision_Toolbox Statistics_And_Machine_Learning_Toolbox
+```
 17. Configure aerc accounts (ln -s from syncthing folder to .config)
 
 ## Additional Nvidia configuration
